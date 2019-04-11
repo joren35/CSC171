@@ -30,4 +30,10 @@ behind(dopey,doc).
 behind(dopey,sleepy).
 behind(smelly,doc).
 
-start() :- .....
+start() :- 
+	order([bashful, droopy, dopey, doc, happy, sneezy, smelly, sleepy, stumpy], [grumpy]).
+
+order([Dwarf|[]], Order) :- write("Order is: "), write(Order), nl.
+order([Dwarf|Others], [First|[]]) :- (front(Dwarf, First) -> order(Others, [Dwarf, First])
+		; order([Others], [First, Dwarf])
+).
