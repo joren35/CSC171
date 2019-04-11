@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSC 171 Assignment BFS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body style="background-size: cover; background-image: url('../static/simple.jpg')">
+	<h4 style="margin-left: 20px; margin-bottom: 50px">CSC 171 Assignment</h4>
+	<div class="container" id="8tiles" style="">
+		<button id="t0" class="btn btn-primary tile blank"> </button>
+		<button id="t1" class="btn btn-primary tile">1</button>
+		<button id="t2" class="btn btn-primary tile">2</button>
+		<br/>
+		<button id="t3" class="btn btn-primary tile">3</button>
+		<button id="t4" class="btn btn-primary tile">4</button>
+		<button id="t5" class="btn btn-primary tile">5</button>
+		<br/>
+		<button id="t6" class="btn btn-primary tile">6</button>
+		<button id="t7" class="btn btn-primary tile">7</button>
+		<button id="t8" class="btn btn-primary tile">8</button>
+	</div>
+	<br/>
+    <div class="col" style="width: 50%; margin-left: 110px;">
+        <div class="btn-group" role="group" aria-label="First group" style="margin-bottom: 10px">
+            <button id="start" type="button" class="btn btn-success btn-lg">Generate</button>
+            <button type="button" disabled class="btn btn-secondary btn-lg"> - This Button Generates random Initial
+                State
+            </button>
+        </div>
+        <br>
+        <div class="btn-group" id="afterme" role="group" aria-label="First group" style="margin-bottom: 10px">
+            <button type="button" onclick="location.reload()" class="btn btn-info btn-lg">Refresh &nbsp;</button>
+            <button type="button" disabled class="btn btn-secondary btn-lg"> - This Button restarts the game</button>
+        </div>
+    </div>
+<script type="text/javascript">
+    var initial_state = {{initial | safe}}
+    var movements = {{moves | safe}}
+</script>
+<script src="../static/main.js"></script>
+</body>
+
+</html>
