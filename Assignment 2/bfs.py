@@ -1,7 +1,32 @@
 import random
 from collections import deque
-from state import State
 
+class State:
+
+    def __init__(self, state, parent, move, depth, cost, key):
+
+        self.state = state
+
+        self.parent = parent
+
+        self.move = move
+
+        self.depth = depth
+
+        self.cost = cost
+
+        self.key = key
+
+        if self.state:
+            self.map = ''.join(str(e) for e in self.state)
+
+    def __eq__(self, other):
+        return self.map == other.map
+
+    def __lt__(self, other):
+        return self.map < other.map
+
+		
 goal_state = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 goal_node = State
 initial_state = [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -130,15 +155,15 @@ def backtrace():
 def export(frontier):
     global moves
     moves = backtrace()
-    print "Shortest Path to Goal: " + str(moves)
+    print ("Shortest Path to Goal: " + str(moves))
 
 
 def shuffler():
     given = goal_state[:]
-    print "Goal State:"+str(given)
+    print ("Goal State:"+str(given))
     randommoves = randomshuffler()
     given = performpath(randommoves,given,0,'no')
-    print given
+    print (given)
 
     for i in range(0,9):
          if given[i] == 0:
@@ -207,10 +232,10 @@ def moveLeft(temp, num):
 
 	
 def printer(solution):
-    print str(solution[0])+" "+str(solution[1])+" "+str(solution[2])
-    print str(solution[3])+" "+str(solution[4])+" "+str(solution[5])
-    print str(solution[6])+" "+str(solution[7])+" "+str(solution[8])
-    print "\n"
+    print (str(solution[0])+" "+str(solution[1])+" "+str(solution[2]))
+    print (str(solution[3])+" "+str(solution[4])+" "+str(solution[5]))
+    print (str(solution[6])+" "+str(solution[7])+" "+str(solution[8]))
+    print ("\n")
 
 	
 def randomshuffler():
