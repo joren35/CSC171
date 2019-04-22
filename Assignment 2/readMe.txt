@@ -1,4 +1,4 @@
-CSC-171 8-puzzle Assignment
+CSC-171 8-tile puzzle solver Assignment
 
 Prerequisites:
 -Flask (Python module)
