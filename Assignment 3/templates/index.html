@@ -7,7 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
 <body style="background-size: cover; background-image: url('../static/simple.jpg')">
-	<h4 style="margin-left: 20px; margin-bottom: 50px">CSC 171 Assignment</h4>
+	<h4 style="margin-left: 20px; margin-bottom: 50px">CSC 171 Assignment 3</h4>
 	<div class="container" id="8tiles" style="">
 		<button id="t0" class="btn btn-primary tile blank"> </button>
 		<button id="t1" class="btn btn-primary tile">1</button>
@@ -35,13 +35,14 @@
             <button type="button" disabled class="btn btn-secondary btn-lg"> - This Button restarts the game</button>
         </div>
     </div>
-    	<p style="margin-left:290px; margin-top:20px; font-family: 'calibri','serif'; color: white;"><span style="background-color:green;">A* Shortest Path: {{ moves }}.</span></p>
-	<p style="margin-left:290px; font-family: 'calibri','serif'; color: white;"><span style="background-color:green;">A* Runtime: {{ sec_astar }} seconds</span></p>
-	<p style="margin-left:290px; font-family: 'calibri','serif'; color: white;"><span style="background-color:green;">A* Number of Explored Nodes: {{ astar }}</span></p>
-	<p style="margin-left:290px; margin-top:3px; font-family: 'calibri','serif'; color: white;"><span style="background-color:green;">BFS Shortest Path: {{ moves2 }}.</span></p>
-	<p style="margin-left:290px; margin-top:3px; font-family: 'calibri','serif'; color: white;"><span style="background-color:green;">BFS Runtime: {{ sec_bfs }} seconds</span></p>
-	<p style="margin-left:290px; font-family: 'calibri','serif'; color: white;"><span style="background-color:green;">BFS Number of Explored Nodes: {{ bfs }}</span></p>
-
+	<span class="rounded-lg">
+		<p class="display_text">A* Shortest Path: <span class="span_new">{{ moves }}.</span></p>
+		<p class="display_text">A* Runtime: <span class="span_new">{{ sec_astar }} seconds</span></p>
+		<p class="display_text">A* Number of Explored Nodes: <span class="span_new">{{ astar }}</span></p>
+		<p class="display_text">BFS Shortest Path: <span class="span_new">{{ moves2 }}.</span></p>
+		<p class="display_text">BFS Runtime: <span class="span_new">{{ sec_bfs }} seconds</span></p>
+		<p class="display_text">BFS Number of Explored Nodes: <span class="span_new">{{ bfs }}</span></p>
+	</span>
 <script type="text/javascript">
     var initial_state = {{initial | safe}}
     var movements = {{moves | safe}}

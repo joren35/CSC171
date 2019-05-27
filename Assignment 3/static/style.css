@@ -1,0 +1,26 @@
+#8tiles {
+	margin: auto !important;
+}
+.display_text {
+	margin-left:120px;
+	margin-top:20px;
+	font-family: 'calibri','serif';
+	font-weight: bold;
+	color: white;
+}
+.tile {
+	width: 100px;
+	height: 100px;
+	font-size: 40px;
+	color: white;
+}
+
+.blank {
+	background-color: white;
+}
+
+.span_new {
+	background-color: green;
+}
+
+

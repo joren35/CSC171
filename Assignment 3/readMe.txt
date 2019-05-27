@@ -12,3 +12,5 @@ How to run:
 4. In the user interface there is only TWO buttons, "Generate" and "Refresh"
    Generate - this button generates a random inital state then solve the puzzle.
    Refresh - it is restarts the puzzle solver. Incase error occurse
+5. The shortest path, runtime, and number of explored nodes of both the A* and BFS are shown below.
+
