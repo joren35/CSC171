@@ -1,7 +1,7 @@
-CSC-171 8-tile puzzle solver Assignment
+CSC-171 8-tile puzzle solver A* Assignment
 
 Prerequisites:
--Flask (Python module)
+-Flask v1.02(Python module)
 -Python 2.7 or 3.7
 -Internet connection (For User Interface(UI) CDNs)
 

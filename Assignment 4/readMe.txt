@@ -1,9 +1,9 @@
 CSC-171 Othello
 
 Prerequisites:
--Python 3 --(any version) won't work on python 2
--pygame   -- It is an python package. Their werb site: https://www.pygame.org/
-	  --"pip install pygame"
+-Python 3.7
+-pygame 1.9.6    -- It is an python package. Their werb site: https://www.pygame.org/
+	         --"pip install pygame"
 
 How to run:
 1. In the command prompt / terminal run the driver file named "driver.py" (i.e. "python driver.py")
